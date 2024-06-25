@@ -1,5 +1,6 @@
 package com.cieloscopio.challenge;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -8,17 +9,63 @@ public class Main {
 
         System.out.println("Tome su desicion!");
 
-        Scanner sc = new Scanner(System.in);
+        int opcion = 0;
 
-        Boolean value = sc.nextBoolean();
+        while(opcion != 7){
 
-        while(value){
-            System.out.println("empezo el programa");
+            String Menu = """
+                    Challenge Cioloscopio:
+                    ***********************************************************
+                    **Elija una ciudad para obtener los datos meteorológicos**
+                    1 - Ciudad de Mexico
+                    2 - Buenos Aires
+                    3 - Bogota
+                    4 - Lima
+                    5 - Santiago
+                    6 - Deseos consultar otra ciudad
+                    7 - Salir
+                    ************************************************************
+                    Elija una opcion basada en el número:
+                    """;
+            System.out.println(Menu);
+
+            Scanner sc = new Scanner(System.in);
+
+            try {
+                opcion = sc.nextInt();
+            } catch (InputMismatchException e) {
+                System.out.println("Valor invalido");
+            }
+
+            switch (opcion){
+                case 1:
+                    System.out.println("Ciudad Mexico");
+                    break;
+                case 2:
+                    System.out.println("Buenos Aires");
+                    break;
+                case 3:
+                    System.out.println("Bogota");
+                    break;
+                case 4:
+                    System.out.println("Lima");
+                    break;
+                case 5:
+                    System.out.println("Santiago");
+                case 6:
+                    System.out.println("Deseos consultar");
+                case 7:
+                    System.out.println("Fin del programa, muchas gracias por usar nuestros Servicios");
+                    break;
+                default:
+                    System.out.println("Por favor ingrese un valor correspondiente a la lista");
+
+            }
+
+
+
+
         }
-
-
-
-
 
 
 
