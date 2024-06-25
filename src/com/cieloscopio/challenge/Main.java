@@ -11,7 +11,7 @@ public class Main {
 
         int opcion = 0;
 
-        while(opcion != 7){
+        while (opcion != 7) {
 
             String Menu = """
                     Challenge Cioloscopio:
@@ -37,7 +37,7 @@ public class Main {
                 System.out.println("Valor invalido");
             }
 
-            switch (opcion){
+            switch (opcion) {
                 case 1:
                     System.out.println("Ciudad Mexico");
                     break;
@@ -63,12 +63,7 @@ public class Main {
             }
 
 
-
-
         }
-
-
-
 
 
     }
